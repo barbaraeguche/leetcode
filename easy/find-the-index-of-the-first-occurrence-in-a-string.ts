@@ -1,4 +1,4 @@
-# name: 28. find the index of the first occurrence in a string.ts
+# name: 28. find the index of the first occurrence in a string
 # link: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string
 
 # solution #
