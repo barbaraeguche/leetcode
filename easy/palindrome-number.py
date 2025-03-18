@@ -1,5 +1,5 @@
 # name: 9. palindrome number
-# link: [https://leetcode.com/problems/palindrome-number](https://leetcode.com/problems/palindrome-number)
+# link: https://leetcode.com/problems/palindrome-number
 
 # solution #
 class Solution:
