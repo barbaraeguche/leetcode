@@ -1,4 +1,4 @@
-# name: two sum
+# name: 1. two sum
 # link: https://leetcode.com/problems/two-sum
 
 # solution #
