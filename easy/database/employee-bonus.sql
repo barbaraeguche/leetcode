@@ -1,0 +1,8 @@
+-- name: 577. employee bonus
+-- link: https://leetcode.com/problems/employee-bonus
+
+-- solution --
+select name, bonus
+from Employee e
+	left join Bonus b on e.empId = b.empId
+where b.bonus is null or b.bonus < 1000
