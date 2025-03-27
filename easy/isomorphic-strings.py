@@ -7,13 +7,13 @@ class Solution:
 		zip_dict = {}
 		
 		for k, v in zip(s, t):
-			if v in zip_dict.values():
-				key_with_v = next(key for key, val in zip_dict.items() if val == v)
+			if k in zip_dict and zip_dict[k] != v:
+				return False
+			
+			elif v in zip_dict.values():
+				key_with_v = next((key for key, val in zip_dict.items() if v == val), None)
 				if key_with_v != k:
 					return False
-			
-			elif k in zip_dict and zip_dict[k] != v:
-				return False
 			
 			zip_dict |= { k: v }
 		
