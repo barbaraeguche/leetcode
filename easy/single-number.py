@@ -10,3 +10,11 @@ class Solution:
     min_value = min(counter_nums.items(), key=lambda x: x[1])
 
     return min_value[0]
+  
+  def singleNumber(self, nums: List[int]) -> int:
+    single = 0
+    
+    for num in nums:
+      single ^= num
+      
+    return single

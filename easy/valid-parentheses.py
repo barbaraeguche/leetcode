@@ -4,19 +4,19 @@
 # solution #
 class Solution:
   def isValid(self, s: str) -> bool:
-    openBrac = "({["
-    closedBrac = ")}]"
+    open_brac = "({["
+    closed_brac = ")}]"
     stack = []
 
     for brac in s:
-      if brac in openBrac:
+      if brac in open_brac:
         stack.append(brac)
-      elif brac in closedBrac:
+      elif brac in closed_brac:
         if self.is_empty(stack):
           return False
 
         ob = stack.pop()
-        if brac != closedBrac[openBrac.index(ob)]:
+        if brac != closed_brac[open_brac.index(ob)]:
           return False
 
     return self.is_empty(stack)

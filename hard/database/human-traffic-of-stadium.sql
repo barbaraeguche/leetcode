@@ -8,9 +8,9 @@ where exists (
 	select 1
 	from (
     select
-      lag(id) over(order by id) AS prev_id,
-	    id AS current_id,
-      lead(id) over(order by id) AS next_id
+      lag(id) over(order by id) as prev_id,
+	    id as current_id,
+      lead(id) over(order by id) as next_id
     from Stadium
     where people >= 100
   ) sub
