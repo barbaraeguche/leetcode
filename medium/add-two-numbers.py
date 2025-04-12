@@ -18,7 +18,8 @@ class Solution:
 	@staticmethod
 	def list_to_int(list: Optional[ListNode]):
 		list_str = ""
-		while list != None:
+		
+		while list:
 			list_str += str(list.val)
 			list = list.next
 		
