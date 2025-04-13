@@ -1,4 +1,4 @@
-# name: 144. binary tree postorder traversal
+# name: 145. binary tree postorder traversal
 # link: https://leetcode.com/problems/binary-tree-postorder-traversal
 
 # solution #
