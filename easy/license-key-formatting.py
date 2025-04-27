@@ -15,3 +15,4 @@ class Solution:
 			joined = [no_dash[:rem]] + joined
 		
 		return "-".join(joined).upper()
+	

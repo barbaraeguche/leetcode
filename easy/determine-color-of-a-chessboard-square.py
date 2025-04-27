@@ -10,3 +10,4 @@ class Solution:
 		is_y_even = int(y) % 2 == 0
 		
 		return (is_x_even and is_y_even) or (not (is_x_even or is_y_even))
+	

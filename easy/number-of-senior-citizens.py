@@ -5,3 +5,4 @@
 class Solution:
 	def countSeniors(self, details: List[str]) -> int:
 		return sum(1 for det in details if int(det[-4:-2]) > 60)
+	

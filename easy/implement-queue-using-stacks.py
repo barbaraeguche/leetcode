@@ -20,3 +20,4 @@ class MyQueue:
 	
 	def empty(self) -> bool:
 		return len(self.queue) == 0
+	

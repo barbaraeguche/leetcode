@@ -21,3 +21,4 @@ class Solution:
 		minimum.sort()
 		
 		return -1 if len(minimum) < 2 else minimum[1]
+	

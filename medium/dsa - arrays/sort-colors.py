@@ -17,3 +17,4 @@ class Solution:
 		nums[:r] = [0] * r
 		nums[r:r+w] = [1] * w
 		nums[r+w:] = [2] * b
+		

@@ -8,3 +8,4 @@ class Solution:
 		found = sorted(filtered, reverse=True)
 		
 		return -1 if len(found) < 2 else int(found[1])
+	

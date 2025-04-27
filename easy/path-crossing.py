@@ -27,3 +27,4 @@ class Solution:
 			seen.add(origin)
 		
 		return False
+	

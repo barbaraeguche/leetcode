@@ -27,3 +27,4 @@ class Solution:
 	@staticmethod
 	def is_vowel(char: str):
 		return char.lower() in ['a', 'e', 'i', 'o', 'u']
+	

@@ -19,3 +19,4 @@ class Solution:
 			splitted = [string[:mod]] + splitted
 		
 		return ".".join(splitted)
+	

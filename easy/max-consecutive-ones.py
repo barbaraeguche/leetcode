@@ -8,3 +8,4 @@ class Solution:
 		splitted = nums.split('0')
 		
 		return len(max(splitted))
+	

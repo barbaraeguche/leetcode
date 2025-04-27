@@ -11,3 +11,4 @@ class Solution:
 			head = head.next
 		
 		return string == string[::-1]
+	

@@ -11,3 +11,4 @@ class Solution:
 			arr[int(text[-1]) - 1] = text[:-1]
 		
 		return " ".join(arr)
+	

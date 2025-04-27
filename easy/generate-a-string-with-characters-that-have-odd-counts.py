@@ -11,3 +11,4 @@ class Solution:
 			return f"{'a' * (n - 1)}b"
 		
 		return f"{'a' * (n - 2)}bc"
+	

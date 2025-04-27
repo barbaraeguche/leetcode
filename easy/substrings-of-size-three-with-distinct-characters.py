@@ -13,3 +13,4 @@ class Solution:
 				arr.append(f"{a}{b}{c}")
 		
 		return len(arr)
+	

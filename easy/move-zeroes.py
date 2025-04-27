@@ -17,3 +17,4 @@ class Solution:
 		while idx < len(nums):
 			nums[idx] = 0
 			idx += 1
+			

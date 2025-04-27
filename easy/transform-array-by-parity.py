@@ -8,3 +8,4 @@ class Solution:
 		odd_count = sum(1 for num in nums if num % 2 != 0)
 		
 		return ([0] * even_count) + ([1] * odd_count)
+	

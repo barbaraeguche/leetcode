@@ -12,3 +12,4 @@ class Solution:
 			return int("".join(arr))
 		
 		return (num_value(firstWord) + num_value(secondWord)) == num_value(targetWord)
+	

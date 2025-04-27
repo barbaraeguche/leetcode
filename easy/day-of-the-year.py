@@ -25,3 +25,4 @@ class Solution:
 		elif (yr % 4 == 0) and (yr % 100 != 0): return True
 		
 		return False
+	

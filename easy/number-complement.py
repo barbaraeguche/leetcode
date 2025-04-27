@@ -13,3 +13,4 @@ class Solution:
 				complement += "0"
 		
 		return int(complement, 2)
+	

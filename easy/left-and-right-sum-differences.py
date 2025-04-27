@@ -17,3 +17,4 @@ class Solution:
 			left_sum[i] = abs(left_sum[i] - right_sum[i])
 		
 		return left_sum
+	

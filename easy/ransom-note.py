@@ -8,3 +8,4 @@ class Solution:
 		ransom_mag = Counter(magazine)
 		
 		return len(ransom_counter - ransom_mag) == 0
+	

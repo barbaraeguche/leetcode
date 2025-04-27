@@ -18,3 +18,4 @@ class Solution:
 		count += (bix if bix else biy).count('1')
 		
 		return count
+	

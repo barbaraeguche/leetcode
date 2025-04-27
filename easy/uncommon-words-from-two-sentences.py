@@ -12,3 +12,4 @@ class Solution:
 		l2 = [k for k,v in Counter(sp2).items() if v == 1 and k not in sp1]
 		
 		return l1 + l2
+	

@@ -15,3 +15,4 @@ class Solution:
 				base = base[:-1]
 		
 		return base
+	

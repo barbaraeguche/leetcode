@@ -12,3 +12,4 @@ class Solution:
 			num_stars -= 1
 		
 		return s
+	

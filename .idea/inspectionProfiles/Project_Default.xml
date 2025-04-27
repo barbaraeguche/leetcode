@@ -21,18 +21,6 @@
     <inspection_tool class="PyInterpreterInspection" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="PyListCreationInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="PyMethodMayBeStaticInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="ignoredPackages">
-        <value>
-          <list size="4">
-            <item index="0" class="java.lang.String" itemvalue="certifi" />
-            <item index="1" class="java.lang.String" itemvalue="requests" />
-            <item index="2" class="java.lang.String" itemvalue="urllib3" />
-            <item index="3" class="java.lang.String" itemvalue="idna" />
-          </list>
-        </value>
-      </option>
-    </inspection_tool>
     <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="ignoredErrors">
         <list>
@@ -50,6 +38,9 @@
           <option value="E128" />
           <option value="E265" />
           <option value="E111" />
+          <option value="E201" />
+          <option value="E231" />
+          <option value="E202" />
         </list>
       </option>
     </inspection_tool>

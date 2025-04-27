@@ -10,3 +10,4 @@ class Solution:
 				s = f"{s[:i]}{chr(ord(prev) + int(s[i]))}{s[i+1:]}"
 		
 		return s
+	

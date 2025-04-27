@@ -33,3 +33,4 @@ class Solution:
 			m2 = "9"
 		
 		return f"{h1}{h2}:{m1}{m2}"
+	

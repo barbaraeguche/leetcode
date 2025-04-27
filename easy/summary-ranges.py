@@ -34,3 +34,4 @@ class Solution:
 		
 		splitted = string.split('#')
 		return f"{splitted[0]}->{splitted[-1]}"
+	

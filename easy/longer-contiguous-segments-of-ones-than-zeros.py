@@ -13,3 +13,4 @@ class Solution:
 		max_ones = ones if len(ones) == 0 else max(ones, key=len)
 		
 		return len(max_zeros) < len(max_ones)
+	

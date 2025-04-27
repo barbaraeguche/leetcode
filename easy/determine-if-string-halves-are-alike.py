@@ -13,3 +13,4 @@ class Solution:
 			return sum(word.count(v) for v in set(word) if v.lower() in vowels)
 		
 		return is_equal(a) == is_equal(b)
+	

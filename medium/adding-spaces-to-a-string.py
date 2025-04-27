@@ -16,3 +16,4 @@ class Solution:
 				formatted += f"{s[num:]}"
 		
 		return formatted
+	

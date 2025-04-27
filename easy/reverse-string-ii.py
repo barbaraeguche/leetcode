@@ -21,3 +21,4 @@ class Solution:
 			result.append(last_chunk[:k][::-1] + last_chunk[k:])
 		
 		return "".join(result)
+	

@@ -11,3 +11,4 @@ class Solution:
 			min_idx = min(min_idx, s.index(f))
 		
 		return -1 if min_idx == 100001 else min_idx
+	

@@ -12,3 +12,4 @@ class Solution:
 				arr.append(word)
 		
 		return min(arr, key=len)
+	

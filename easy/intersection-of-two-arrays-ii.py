@@ -16,3 +16,4 @@ class Solution:
 				arr.append(num)
 		
 		return arr
+	

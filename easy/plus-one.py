@@ -8,3 +8,4 @@ class Solution:
 		plus_one = int(digits_str) + 1
 		
 		return list(map(int, str(plus_one)))
+	

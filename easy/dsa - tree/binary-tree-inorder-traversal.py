@@ -14,3 +14,4 @@ class Solution:
 		
 		traversal(root)
 		return inorder
+	

@@ -8,3 +8,4 @@ class Solution:
 		values = counter.values()
 		
 		return len(values) == len(set(values))
+	

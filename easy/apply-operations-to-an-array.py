@@ -30,3 +30,4 @@ class Solution:
 		while idx < len(arr):
 			arr[idx] = 0
 			idx += 1
+			

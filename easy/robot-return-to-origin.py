@@ -8,3 +8,4 @@ class Solution:
 		L, R = moves.count('L'), moves.count('R')
 		
 		return [R-L, U-D] == [0, 0]
+	

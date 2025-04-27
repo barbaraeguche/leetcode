@@ -12,4 +12,5 @@ class Solution:
         return [idx_dict[complement], i]
 
       idx_dict |= { x: i }
+      
     return []

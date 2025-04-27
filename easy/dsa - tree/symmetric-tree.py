@@ -4,7 +4,7 @@
 # solution #
 class Solution:
 	def isSymmetric(self, root: Optional[TreeNode]) -> bool:
-		if root == None: return True
+		if not root: return True
 		return self.mirror(root.left, root.right)
 	
 	@staticmethod
@@ -19,3 +19,4 @@ class Solution:
 			Solution.mirror(left.left, right.right) and
 			Solution.mirror(left.right, right.left)
 		)
+	

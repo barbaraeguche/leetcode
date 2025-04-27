@@ -16,3 +16,4 @@ class Solution:
 			return "".join([s for s in stack if s != '#'])
 		
 		return imp_stack(s) == imp_stack(t)
+	

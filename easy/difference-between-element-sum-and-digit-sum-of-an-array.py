@@ -8,3 +8,4 @@ class Solution:
 		digit = sum(int(d) for num in nums for d in str(num))
 		
 		return abs(element - digit)
+	

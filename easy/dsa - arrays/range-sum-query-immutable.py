@@ -9,3 +9,4 @@ class NumArray:
 	
 	def sumRange(self, left: int, right: int) -> int:
 		return sum(self.nums[left:right + 1])
+	

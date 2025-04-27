@@ -8,3 +8,4 @@ class Solution:
 		count_b = 'b' * s.count('b')
 		
 		return (count_a + count_b) == s
+	

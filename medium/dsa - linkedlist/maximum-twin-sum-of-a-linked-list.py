@@ -30,3 +30,4 @@ class Solution:
 			fast = fast.next.next
 		
 		return stack, slow
+	

@@ -18,3 +18,4 @@ class Solution:
 		
 		curr.next = prev
 		return curr
+	

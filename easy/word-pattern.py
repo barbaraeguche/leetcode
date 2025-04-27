@@ -23,3 +23,4 @@ class Solution:
 			word_dict |= { k: v }
 			
 		return True
+	

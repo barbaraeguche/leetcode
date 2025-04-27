@@ -24,3 +24,4 @@ class Solution:
 				encoded.append(encode)
 		
 		return len(encoded)
+	

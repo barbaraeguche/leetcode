@@ -19,3 +19,4 @@ class Solution:
 			else: nums.append(int(op))
 		
 		return sum(nums)
+	

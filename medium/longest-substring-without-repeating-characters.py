@@ -20,3 +20,4 @@ class Solution:
 				seen.add(string)
 		
 		return 0 if len(seen) == 0 else len(max(seen, key=len))
+	

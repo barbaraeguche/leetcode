@@ -13,3 +13,4 @@ class Solution:
 			merged[i] = word1[i] + word2[i]
 		
 		return "".join(merged) + max_word[len(min_word):]
+	

@@ -25,3 +25,4 @@ class Solution:
 	@staticmethod
 	def is_letter(char: str):
 		return char.isalpha()
+	

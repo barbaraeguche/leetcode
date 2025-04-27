@@ -15,3 +15,4 @@ class Solution:
 				current = num
 		
 		return idx + 1
+	

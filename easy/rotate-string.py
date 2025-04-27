@@ -25,3 +25,4 @@ class Solution:
 			return False
 		
 		return s in goal + goal
+	

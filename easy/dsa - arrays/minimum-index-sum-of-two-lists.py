@@ -24,3 +24,4 @@ class Solution:
 			idx_sum = min(total, idx_sum)
 		
 		return arr
+	

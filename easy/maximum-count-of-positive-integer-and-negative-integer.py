@@ -8,3 +8,4 @@ class Solution:
 		neg = sum(1 for num in nums if num < 0)
 		
 		return max(pos, neg)
+	

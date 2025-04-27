@@ -12,3 +12,4 @@ class Solution:
 		
 		total = [k for k,v in rr_dict.items() if len(set(v)) == 3]
 		return len(total)
+	

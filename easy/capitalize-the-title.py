@@ -13,3 +13,4 @@ class Solution:
 				formatted += f"{word[0].upper()}{word[1:].lower()} "
 		
 		return formatted.strip()
+	

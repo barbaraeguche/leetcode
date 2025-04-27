@@ -10,3 +10,4 @@ class Solution:
 		arr.sort()
 		
 		return -1 if len(arr) == 0 else arr[0]
+	

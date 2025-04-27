@@ -10,3 +10,4 @@ class Solution:
 		sum2 = sum(nums)
 		
 		return sum1 - sum2
+	

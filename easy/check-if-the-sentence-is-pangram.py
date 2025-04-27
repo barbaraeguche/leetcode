@@ -8,3 +8,7 @@ class Solution:
 		counter = set(Counter(sentence).keys())
 		
 		return len(letters - counter) == 0
+	
+	def checkIfPangram(self, sentence: str) -> bool:
+		return len(set(sentence)) == 26
+	

@@ -8,8 +8,7 @@ class Solution:
 		array = []
 		
 		for candy in candies:
-			array.append(
-				True if candy + extraCandies >= max_candies else False
-			)
+			array.append(True if candy + extraCandies >= max_candies else False)
 		
 		return array
+	

@@ -11,3 +11,4 @@ class Solution:
 				max_three = n
 		
 		return "" if max_three == "-1" else max_three
+	

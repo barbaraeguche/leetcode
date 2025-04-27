@@ -15,3 +15,4 @@ class Solution:
 				string += f"{word[1:]}{first}ma{'a' * (i + 1)} "
 		
 		return string.strip()
+	

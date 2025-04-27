@@ -10,3 +10,4 @@ class Solution:
 			array[i] = (bin(i)[2:]).count('1')
 		
 		return array
+	

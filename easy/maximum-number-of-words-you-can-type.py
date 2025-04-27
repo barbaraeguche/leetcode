@@ -11,3 +11,4 @@ class Solution:
 				arr.append(word)
 		
 		return len(arr)
+	

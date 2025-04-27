@@ -16,3 +16,4 @@ class Solution:
 			return []
 		
 		return ["".join(pair) for pair in product(*values)]
+	

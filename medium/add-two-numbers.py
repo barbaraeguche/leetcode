@@ -24,3 +24,4 @@ class Solution:
 			list = list.next
 		
 		return int(list_str[::-1])
+	

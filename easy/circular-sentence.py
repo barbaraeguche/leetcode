@@ -11,3 +11,4 @@ class Solution:
 				return False
 		
 		return split[0][0] == split[-1][-1]
+	

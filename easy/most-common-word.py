@@ -9,3 +9,4 @@ class Solution:
 		
 		counter = Counter(not_banned)
 		return counter.most_common()[0][0]
+	
