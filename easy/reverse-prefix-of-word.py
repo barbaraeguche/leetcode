@@ -10,5 +10,3 @@ class Solution:
 		except ValueError:
 			return word
 		
-		return word
-	
