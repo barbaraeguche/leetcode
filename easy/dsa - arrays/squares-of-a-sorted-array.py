@@ -7,7 +7,7 @@ class Solution:
 		for i, num in enumerate(nums):
 			nums[i] = num ** 2
 		
-		# reverse arr
+		# sort nums
 		nums.sort()
 		
 		return nums
