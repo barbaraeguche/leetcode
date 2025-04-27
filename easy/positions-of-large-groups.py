@@ -24,7 +24,7 @@ class Solution:
 	def group_char(s: str) -> str:
 		prefix = s[0]
 		
-		for i, char in enumerate(s[1:]):
+		for char in s[1:]:
 			if prefix[-1] == char:
 				prefix += char
 			else:

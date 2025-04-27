@@ -7,7 +7,7 @@ class Solution:
 		reference = s.count(s[0])
 		
 		for char in set(s):
-			if reference != s.count(char):
+			if s.count(char) != reference:
 				return False
 		
 		return True
