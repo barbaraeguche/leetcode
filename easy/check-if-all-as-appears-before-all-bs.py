@@ -4,8 +4,8 @@
 # solution #
 class Solution:
 	def checkString(self, s: str) -> bool:
-		count_a = 'a' * s.count('a')
-		count_b = 'b' * s.count('b')
+		a = 'a' * s.count('a')
+		b = 'b' * s.count('b')
 		
-		return (count_a + count_b) == s
+		return (a + b) == s
 	
