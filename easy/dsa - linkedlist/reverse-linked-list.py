@@ -8,14 +8,12 @@ class Solution:
 		if not head.next: return head
 		
 		prev, curr = None, head
-		temp = curr.next
 		
-		while curr.next:
+		while curr:
+			temp = curr.next
 			curr.next = prev
 			prev = curr
 			curr = temp
-			temp = curr.next
 		
-		curr.next = prev
-		return curr
+		return prev
 	
