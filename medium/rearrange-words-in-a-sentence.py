@@ -15,7 +15,7 @@ class Solution:
 		hashm = dict(sorted(hashm.items(), key=lambda x: x[0]))
 		
 		# merge into string
-		for k, v in hashm.items():
+		for _, v in hashm.items():
 			string += f"{' '.join(v)} "
 		
 		# remove last space
