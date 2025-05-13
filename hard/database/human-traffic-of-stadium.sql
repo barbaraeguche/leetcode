@@ -5,8 +5,8 @@
 select s.*
 from Stadium s
 where exists (
-	select 1
-	from (
+  select 1
+  from (
     select
       lag(id) over(order by id) as prev_id,
 	    id as current_id,
@@ -14,7 +14,7 @@ where exists (
     from Stadium
     where people >= 100
   ) sub
-	where s.id in (sub.prev_id, sub.current_id, sub.next_id)
-		and prev_id = current_id - 1
-		and current_id = next_id - 1
+  where s.id in (sub.prev_id, sub.current_id, sub.next_id)
+    and prev_id = current_id - 1
+	and current_id = next_id - 1
 )
