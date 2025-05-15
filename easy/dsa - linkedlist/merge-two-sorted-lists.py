@@ -8,13 +8,7 @@ class Solution:
 		if not list2: return list1
 		
 		# choose the starting node
-		if list1.val < list2.val:
-			head = list1
-			list1 = list1.next
-		else:
-			head = list2
-			list2 = list2.next
-		
+		head = ListNode(0)
 		current = head
 		
 		# merge the lists
@@ -31,5 +25,5 @@ class Solution:
 		# attach the remaining nodes
 		current.next = list1 if list1 else list2
 		
-		return head
+		return head.next
 	
