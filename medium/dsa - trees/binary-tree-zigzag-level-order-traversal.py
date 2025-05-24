@@ -10,27 +10,15 @@ class Solution:
 		# keep track of level, odd levels are reversed
 		idx = 0
 		
-		array, temp = [], []
-		queue = deque([root, '#'])
+		array = []
+		queue = deque([root])
 		
 		while queue:
-			node = queue.popleft()
+			length = len(queue)
+			temp = []
 			
-			# delimiter to keep track of each level
-			if node == '#':
-				temp = temp if idx % 2 == 0 else temp[::-1]
-				
-				# append the current row
-				array.append(temp)
-				# clear the temp array that kept track of row nodes
-				temp = []
-				# switch to either odd or even depending on previous state
-				idx = 1 if idx == 0 else 0
-				
-				# append delimiter if not the only element remaining
-				if len(queue) > 0:
-					queue.append('#')
-			else:
+			for _ in range(length):
+				node = queue.popleft()
 				# append the value
 				temp.append(node.val)
 				
@@ -39,5 +27,10 @@ class Solution:
 					queue.append(node.left)
 				if node.right:
 					queue.append(node.right)
+			
+			# append the current row
+			array.append(temp if idx == 0 else temp[::-1])
+			# switch by row
+			idx = 1 if idx == 0 else 0
 		
 		return array
