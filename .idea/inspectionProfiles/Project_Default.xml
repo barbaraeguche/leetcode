@@ -3,7 +3,6 @@
     <option name="myName" value="Project Default" />
     <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <Languages>
-        <language minSize="374" name="Python" />
         <language minSize="286" name="TypeScript" />
       </Languages>
     </inspection_tool>
@@ -41,6 +40,7 @@
           <option value="E201" />
           <option value="E231" />
           <option value="E202" />
+          <option value="E713" />
         </list>
       </option>
     </inspection_tool>
