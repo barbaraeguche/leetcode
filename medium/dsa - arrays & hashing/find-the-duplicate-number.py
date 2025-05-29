@@ -4,5 +4,14 @@
 # solution #
 class Solution:
 	def findDuplicate(self, nums: List[int]) -> int:
-		counter = [k for k,v in Counter(nums).items() if v > 1]
-		return counter[0]
+		for num in nums:
+			idx = abs(num) - 1
+			
+			# has visited
+			if nums[idx] < 0:
+				return abs(num)
+			
+			# mark as negative
+			nums[idx] *= -1
+		
+		return -1
