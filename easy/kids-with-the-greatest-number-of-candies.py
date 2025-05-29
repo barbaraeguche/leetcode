@@ -4,11 +4,10 @@
 # solution #
 class Solution:
 	def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-		max_candies = max(candies)
-		array = []
+		max_candy = max(candies)
 		
-		for candy in candies:
-			array.append(True if candy + extraCandies >= max_candies else False)
-		
-		return array
+		for i, candy in enumerate(candies):
+			candies[i] = True if candy + extraCandies >= max_candy else False
+			
+		return candies
 	
