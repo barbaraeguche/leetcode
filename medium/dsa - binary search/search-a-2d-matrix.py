@@ -7,12 +7,9 @@ class Solution:
 		l, r = 0, len(matrix) - 1
 		
 		while l <= r:
-			a, b = matrix[l], matrix[r]
-			
-			if target in a or target in b:
+			if target in matrix[l] or target in matrix[r]:
 				return True
 			
-			l += 1
-			r -= 1
+			l, r = l + 1, r - 1
 		
 		return False
