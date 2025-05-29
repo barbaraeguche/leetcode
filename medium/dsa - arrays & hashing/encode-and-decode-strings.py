@@ -2,9 +2,10 @@
 # link: https://leetcode.com/problems/encode-and-decode-strings
 
 # solution #
-class Solution:
-	
+class Codec:
 	def encode(self, strs: List[str]) -> str:
+		"""Encodes a list of strings to a single string.
+		"""
 		string = ""
 		
 		for word in strs:
@@ -13,6 +14,8 @@ class Solution:
 		return string
 	
 	def decode(self, s: str) -> List[str]:
+		"""Decodes a single string to a list of strings.
+		"""
 		result = []
 		i, temp = 0, ""
 		
