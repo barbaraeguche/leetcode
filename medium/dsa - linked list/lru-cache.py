@@ -7,7 +7,7 @@ when either get (and key exist) or put is called, move the node
 to the end of the list as it becomes the most recently used
 """
 
-class Node():
+class Node:
 	def __init__(self, key: int, value: int):
 		self.key = key
 		self.value = value

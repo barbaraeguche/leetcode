@@ -4,15 +4,12 @@
 # solution #
 class Solution:
 	def removeDuplicates(self, nums: List[int]) -> int:
-		current, idx = nums[0], 0
-		
-		for i, num in enumerate(nums[1:]):
-			if num == current:
-				continue
-			else:
-				idx += 1
+		idx = 1
+	
+		for i, num in enumerate(nums[1:], 1):
+			if nums[i] != nums[i-1]:
 				nums[idx] = num
-				current = num
+				idx += 1
 		
-		return idx + 1
+		return idx
 	
