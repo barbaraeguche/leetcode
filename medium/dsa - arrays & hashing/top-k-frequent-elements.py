@@ -4,11 +4,22 @@
 # solution #
 class Solution:
 	def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-		# compute k,v pairs
-		counter = Counter(nums)
-		# find the k most common
-		common = counter.most_common(k)
+		count = Counter(nums)
+		freqs = [[] * i for i in range(len(nums))]
 		
-		# return the keys
-		return [k for k,_ in common]
+		# bucket sort by frequency
+		for num, frq in count.items():
+			freqs[frq - 1].append(num)
+		
+		result = []
+		
+		# loop backwards till find k elements
+		for i in range(len(freqs) - 1, -1, -1):
+			for num in freqs[i]:
+				result.append(num)
+				
+				if len(result) == k:
+					return result
+		
+		return []
 	
