@@ -12,3 +12,24 @@ class Solution:
 		
 		return nums
 	
+	def sortedSquares(self, nums: List[int]) -> List[int]:
+		n = len(nums)
+		result = [0] * n
+		
+		left, right = 0, n - 1
+		position = n - 1
+		
+		# use binary search
+		while left <= right:
+			n1, n2 = nums[left], nums[right]
+			
+			if abs(n1) >= abs(n2):
+				result[position] = n1 ** 2
+				left += 1
+			else:
+				result[position] = n2 ** 2
+				right -= 1
+			
+			position -= 1
+		
+		return result

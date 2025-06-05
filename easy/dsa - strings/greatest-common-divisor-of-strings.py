@@ -4,23 +4,21 @@
 # solution #
 class Solution:
 	def gcdOfStrings(self, str1: str, str2: str) -> str:
-		length_str1 = len(str1)
-		length_str2 = len(str2)
+		len1, len2 = len(str1), len(str2)
 		
-		prefix = longest = ""
+		string = longest = ""
 		
 		for char in str2:
-			prefix += char
-			length_prefix = len(prefix)
+			string += char
+			lenS = len(string)
 			
 			# check if prefix is a factor
-			qstr1, rstr1 = divmod(length_str1, length_prefix)
-			qstr2, rstr2 = divmod(length_str2, length_prefix)
+			q1, r1 = divmod(len1, lenS)
+			q2, r2 = divmod(len2, lenS)
 			
 			# prefix is a factor of both str1 and str2
-			if (rstr1, rstr2) == (0, 0):
-				# if prefix can be constructed
-				if (prefix * qstr1, prefix * qstr2) == (str1, str2):
-					longest = max(longest, prefix, key=len)
+			if (r1, r2) == (0, 0):
+				if (string * q1, string * q2) == (str1, str2):
+					longest = max(longest, string, key=len)
 		
 		return longest
