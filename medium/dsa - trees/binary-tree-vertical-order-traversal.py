@@ -12,7 +12,7 @@ class Solution:
 		# min and max cols to prevent sorting
 		min_col = max_col = 0
 		# to keep track of node and it's col
-		queue = deque([[root, 0]])
+		queue = deque([(root, 0)])
 		
 		# basically a level order traversal
 		while queue:

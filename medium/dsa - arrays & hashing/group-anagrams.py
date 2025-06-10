@@ -4,14 +4,18 @@
 # solution #
 class Solution:
 	def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-		hashm = {}
+		base, hashMap = ord('a'), defaultdict(list)
 		
 		for word in strs:
-			# sort the string, and use that as key
-			string = "".join(sorted(word))
+			# for all possible characters
+			charArr = [0] * 26
 			
-			# store the word in an array
-			hashm.setdefault(string, []).append(word)
+			for char in word:
+				charArr[ord(char) - base] += 1
+			
+			# store in the map using the ascii array value as key
+			hashMap[tuple(charArr)].append(word)
 		
-		return [v for _, v in hashm.items()]
+		# return all values
+		return list(hashMap.values())
 	

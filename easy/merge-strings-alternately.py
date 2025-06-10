@@ -4,13 +4,15 @@
 # solution #
 class Solution:
 	def mergeAlternately(self, word1: str, word2: str) -> str:
-		min_word = min(word1, word2, key=len)
-		max_word = word1 if min_word != word1 else word2
+		l1, l2 = len(word1), len(word2)
+	
+		string = ""
 		
-		merged = [""] * len(min_word)
+		for i in range(max(l1, l2)):
+			if i < l1:
+				string += word1[i]
+			if i < l2:
+				string += word2[i]
 		
-		for i in range(len(min_word)):
-			merged[i] = word1[i] + word2[i]
-		
-		return "".join(merged) + max_word[len(min_word):]
+		return string
 	
