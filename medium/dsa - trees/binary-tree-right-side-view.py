@@ -26,8 +26,8 @@ class Solution:
 				if node.right:
 					queue.append(node.right)
 			
-			# append the current row
-			array.append(temp)
+			# append the last element on this row
+			# the last element is what is visible from the right side
+			array.append(temp[-1])
 		
-		# the last element on each row is visible from the right side
-		return [n[-1] for n in array]
+		return array
