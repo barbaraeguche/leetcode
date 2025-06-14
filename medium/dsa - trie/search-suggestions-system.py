@@ -2,17 +2,17 @@
 # link: https://leetcode.com/problems/search-suggestions-system
 
 # solution #
+class TrieNode:
+	def __init__(self):
+		self.children = {}
+		self.suggestions = []
+	
+	def addSuggestions(self, product):
+		if len(self.suggestions) < 3:
+			self.suggestions.append(product)
+
 class Solution:
 	def suggestedProducts(self, products: List[str], searchWord: str) -> List[List[str]]:
-		class TrieNode:
-			def __init__(self):
-				self.children = {}
-				self.suggestions = []
-			
-			def addSuggestions(self, product):
-				if len(self.suggestions) < 3:
-					self.suggestions.append(product)
-		
 		# root node
 		root = TrieNode()
 		
