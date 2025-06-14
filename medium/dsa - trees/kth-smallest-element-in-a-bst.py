@@ -15,3 +15,10 @@ class Solution:
 		traversal(root)
 		return inorder[k - 1]
 	
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(n); for stack(custom and recursion)
+"""

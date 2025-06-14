@@ -9,15 +9,19 @@ class Solution:
 		"""
 		# n x n matrix
 		length = len(matrix)
-		seen = set()
 		
 		for i in range(length):
-			for j in range(length):
-				if (i, j) not in seen:
-					# swap numbers
-					matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
-					# add (j, i) to set to prevent re-swap
-					seen.add((j, i))
+			for j in range(i + 1, length):
+				# swap numbers
+				matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
 			
 			# reverse the current row
 			matrix[i] = matrix[i][::-1]
+
+"""
+time complexity:
+- O(n^2)
+
+space complexity:
+- O(1)
+"""
