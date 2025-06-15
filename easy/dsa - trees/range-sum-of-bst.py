@@ -4,18 +4,16 @@
 # solution #
 class Solution:
 	def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
-		summation = 0
-		
-		queue = deque([root])
-		while queue:
-			node = queue.popleft()
+		def traversal(node):
+			if not node:
+				return 0
 			
-			if low <= node.val <= high:
-				summation += node.val
+			# bst pruning
+			if node.val < low:
+				return traversal(node.right)
+			if node.val > high:
+				return traversal(node.left)
 			
-			if node.left:
-				queue.append(node.left)
-			if node.right:
-				queue.append(node.right)
+			return node.val + traversal(node.left) + traversal(node.right)
 		
-		return summation
+		return traversal(root)

@@ -18,3 +18,11 @@ class Solution:
 			stack.append(i)
 		
 		return array
+
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(n)
+"""

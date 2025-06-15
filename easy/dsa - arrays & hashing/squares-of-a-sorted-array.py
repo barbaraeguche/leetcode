@@ -4,15 +4,6 @@
 # solution #
 class Solution:
 	def sortedSquares(self, nums: List[int]) -> List[int]:
-		for i, num in enumerate(nums):
-			nums[i] = num ** 2
-		
-		# sort nums
-		nums.sort()
-		
-		return nums
-	
-	def sortedSquares(self, nums: List[int]) -> List[int]:
 		n = len(nums)
 		result = [0] * n
 		
@@ -33,3 +24,11 @@ class Solution:
 			position -= 1
 		
 		return result
+
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(n)
+"""
