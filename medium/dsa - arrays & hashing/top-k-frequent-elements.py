@@ -5,7 +5,7 @@
 class Solution:
 	def topKFrequent(self, nums: List[int], k: int) -> List[int]:
 		count = Counter(nums)
-		freqs = [[] * i for i in range(len(nums))]
+		freqs = [[] for _ in range(len(nums))]
 		
 		# bucket sort by frequency
 		for num, frq in count.items():
@@ -23,3 +23,10 @@ class Solution:
 		
 		return []
 	
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(n)
+"""

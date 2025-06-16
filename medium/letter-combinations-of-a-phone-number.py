@@ -16,4 +16,11 @@ class Solution:
 			return []
 		
 		return ["".join(pair) for pair in product(*values)]
-	
+
+"""
+time complexity:
+- O(n * 4^n)
+
+space complexity:
+- O(n)
+"""
