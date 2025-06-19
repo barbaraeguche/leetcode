@@ -37,7 +37,7 @@ class Solution:
 
 """
 time complexity:
-- O(n^2)
+- O(n * m)
 
 space complexity:
 - O(1)

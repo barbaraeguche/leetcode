@@ -4,18 +4,42 @@
 # solution #
 class Solution:
 	def findAnagrams(self, s: str, p: str) -> List[int]:
-		# cannot be a permutation of a string shorter than it
-		if len(p) > len(s):
+		n, m = len(s), len(p)
+		
+		# cannot be a permutation
+		if n < m:
 			return []
 		
-		length = len(p)
+		pCount = Counter(p)
+		windowCount = Counter(s[:m])
+		
 		result = []
 		
-		# keep frequency count
-		counter_p = Counter(p)
+		# first n characters are equal
+		if pCount == windowCount:
+			result.append(0)
 		
-		for i in range(0, len(s) - length + 1):
-			if len(counter_p - Counter(s[i:i + length])) == 0:
-				result.append(i)
+		for i in range(m, n):
+			# remove leftmost char of the window
+			leftChar = s[i - m]
+			windowCount[leftChar] -= 1
+			
+			if windowCount == 0:
+				del windowCount[leftChar]
+			
+			# add new char to the window
+			rightChar = s[i]
+			windowCount[rightChar] += 1
+			
+			if windowCount == pCount:
+				result.append(i - m + 1)
 		
 		return result
+
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(1)
+"""
