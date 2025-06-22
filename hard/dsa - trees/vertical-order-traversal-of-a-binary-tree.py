@@ -43,3 +43,11 @@ class Solution:
 			result.append([val for val, row in treeMap[c]])
 		
 		return result
+
+"""
+time complexity:
+- O(n * log(n))
+
+space complexity:
+- O(n)
+"""

@@ -7,10 +7,10 @@ class Solution:
 		pathSum = 0
 		
 		def pathCheck(node: Optional[TreeNode]):
-			nonlocal pathSum
 			if not node:
 				return False
 			
+			nonlocal pathSum
 			pathSum += node.val
 			
 			# base case: path sum found and is at a leaf node
