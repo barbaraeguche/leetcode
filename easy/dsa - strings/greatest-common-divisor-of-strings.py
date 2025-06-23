@@ -22,3 +22,11 @@ class Solution:
 					longest = max(longest, string, key=len)
 		
 		return longest
+
+"""
+time complexity:
+- O(n * m)
+
+space complexity:
+- O(1)
+"""

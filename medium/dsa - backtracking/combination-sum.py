@@ -23,7 +23,6 @@ class Solution:
 				
 				# find all possible combinations
 				backtrack(i, target - num, path)
-				
 				# backtrack
 				path.pop()
 		

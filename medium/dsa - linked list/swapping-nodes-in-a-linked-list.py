@@ -17,3 +17,11 @@ class Solution:
 		node_a.val, node_b.val = node_b.val, node_a.val
 		
 		return head
+
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(1)
+"""

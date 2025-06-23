@@ -35,3 +35,11 @@ class Solution:
 				string += word[length:window]
 		
 		return string == word
+
+"""
+time complexity:
+- O(n + m)
+
+space complexity:
+- O(1)
+"""

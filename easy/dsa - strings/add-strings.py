@@ -23,3 +23,11 @@ class Solution:
 		
 		# perform recursion till last number
 		return self.addNums(num1[:-1], num2[:-1], str(carry)) + str(num)
+
+"""
+time complexity:
+- O(max(n, m)
+
+space complexity:
+- O(max(n, m)
+"""
