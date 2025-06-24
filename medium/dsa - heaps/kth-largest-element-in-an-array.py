@@ -10,5 +10,8 @@ class Solution:
 		
 		for num in nums:
 			hq.heappush(heap, num)
+			# keep heap at size k
+			if len(heap) > k:
+				hq.heappop(heap)
 		
-		return hq.nlargest(k, heap)[-1]
+		return heap[0]

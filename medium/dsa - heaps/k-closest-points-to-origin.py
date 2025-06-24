@@ -12,11 +12,13 @@ class Solution:
 			x, y = point
 			# find the distance to the origin
 			dist = self.distance(x, y)
+			
 			# add to heap (min-value here becomes the distance)
-			hq.heappush(heap, (dist, point))
+			hq.heappush(heap, (-dist, point))
+			# keep heap at size k
+			if len(heap) > k:
+				hq.heappop(heap)
 		
-		# find the closest k
-		heap = hq.nsmallest(k, heap)
 		return [h[1] for h in heap]
 	
 	@staticmethod
