@@ -27,3 +27,11 @@ class Solution:
 					area = max(area, dfs(r, c))
 		
 		return area
+
+"""
+time complexity:
+- O(n * m)
+
+space complexity:
+- O(n * m)
+"""

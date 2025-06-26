@@ -25,3 +25,11 @@ class Solution:
 					islands += 1
 		
 		return islands
+
+"""
+time complexity:
+- O(n * m)
+
+space complexity:
+- O(n * m)
+"""
