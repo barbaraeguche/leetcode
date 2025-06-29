@@ -5,7 +5,6 @@
 class Solution:
 	def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
 		length = len(temperatures)
-		
 		stack, array = [], [0] * length
 		
 		for i in range(length):

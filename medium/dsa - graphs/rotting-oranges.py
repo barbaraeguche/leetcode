@@ -20,7 +20,7 @@ class Solution:
 		while queue:
 			length = len(queue)
 			
-			for i in range(length):
+			for _ in range(length):
 				nr, nc = queue.popleft()
 				
 				for dr, dc in directions:
