@@ -28,4 +28,11 @@ class Solution:
 			curr = curr.next
 		
 		return head
-	
+
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(n)
+"""

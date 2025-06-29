@@ -41,8 +41,8 @@ class Solution:
 
 """
 time complexity:
-- O(m * 4^n); m is the number of cells in the board and n is the length of the word
+- O(m * n * 4^L); L is the length of the word
 
 space complexity:
-- O(n)
+- O(L)
 """

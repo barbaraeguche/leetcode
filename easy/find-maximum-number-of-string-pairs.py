@@ -4,19 +4,26 @@
 # solution #
 class Solution:
 	def maximumNumberOfStringPairs(self, words: List[str]) -> int:
-		hashm = {}
+		base, pairMap = ord('a'), defaultdict(int)
 		
 		for word in words:
-			# sort the string and store as the key
-			string = "".join(sorted(word))
+			# character array
+			ordArr = [0] * 26
 			
-			# store the count as the value
-			if string in hashm:
-				hashm[string] += 1
-			else:
-				hashm |= { string: 1 }
+			# at most 2 characters
+			for i in range(2):
+				ordArr[ord(word[i]) - base] += 1
+			
+			# use the ord array as key
+			pairMap[tuple(ordArr)] += 1
 		
-		# find the count where the value is even
-		count = sum(1 for _,v in hashm.items() if v % 2 == 0)
-		
-		return count
+		# only ones that have a pair
+		return sum(1 for _, v in pairMap.items() if v == 2)
+
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(n)
+"""
