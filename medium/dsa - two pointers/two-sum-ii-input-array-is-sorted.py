@@ -19,4 +19,11 @@ class Solution:
 				right -= 1
 		
 		return []
-	
+
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(1)
+"""

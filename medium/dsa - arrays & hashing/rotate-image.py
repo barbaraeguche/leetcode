@@ -7,16 +7,16 @@ class Solution:
 		"""
 		Do not return anything, modify matrix in-place instead.
 		"""
-		# n x n matrix
 		length = len(matrix)
 		
 		for i in range(length):
+			# transpose numbers
 			for j in range(i + 1, length):
-				# swap numbers
 				matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
-			
-			# reverse the current row
-			matrix[i] = matrix[i][::-1]
+				
+			# reverse numbers
+			for j in range(length // 2):
+				matrix[i][j], matrix[i][-j-1] = matrix[i][-j-1], matrix[i][j]
 
 """
 time complexity:

@@ -26,3 +26,11 @@ class Solution:
 				r -= 1
 		
 		return water
+
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(1)
+"""

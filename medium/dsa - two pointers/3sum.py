@@ -30,3 +30,11 @@ class Solution:
 					l += 1
 		
 		return [list(triplet) for triplet in triplets]
+
+"""
+time complexity:
+- O(n^2)
+
+space complexity:
+- O(n)
+"""
