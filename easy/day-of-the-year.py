@@ -21,8 +21,10 @@ class Solution:
 	
 	@staticmethod
 	def is_leap_year(yr: int) -> bool:
-		if (yr % 400 == 0) and (yr % 100 == 0): return True
-		elif (yr % 4 == 0) and (yr % 100 != 0): return True
+		if (yr % 400 == 0) and (yr % 100 == 0):
+			return True
+		elif (yr % 4 == 0) and (yr % 100 != 0):
+			return True
 		
 		return False
 	
