@@ -4,22 +4,27 @@
 # solution #
 class Solution:
 	def decodeMessage(self, key: str, message: str) -> str:
-		base, string = ord('a'), ""
-		idx = 0
-		
-		hashm = {}
+		idx, base = 0, ord('a')
+		mapping = {}
 		
 		# find unique characters in key
 		for char in key:
-			if char not in hashm.keys() and char.isalpha():
-				hashm |= { char: chr(base + idx) }
+			if char.isalpha() and char not in mapping:
+				mapping[char] = chr(base + idx)
 				idx += 1
 		
+		decoded = []
+	
 		# decode the message
 		for char in message:
-			if char == " ":
-				string += char
-			else:
-				string += hashm[char]
-		
-		return string
+			decoded.append(char if char == " " else mapping[char])
+			
+		return "".join(decoded)
+
+"""
+time complexity:
+- O(n + m); n is the length of the key, m is the length of the message
+
+space complexity:
+- O(1)
+"""
