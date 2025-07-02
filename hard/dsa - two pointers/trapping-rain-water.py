@@ -18,3 +18,11 @@ class Solution:
 			water += total if total > 0 else 0
 		
 		return water
+
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(n)
+"""
