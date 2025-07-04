@@ -26,7 +26,7 @@ class Solution:
 				
 				node = node.children[char]
 				# add the prod as a suggestion for the node
-				node.addSuggestions(prod)
+				node.addSuggestions(prod)  # at most 3; constant space
 		
 		# find the top three for each search word
 		suggestions, node = [], root
@@ -37,4 +37,11 @@ class Solution:
 			suggestions.append(node.suggestions if node else [])
 		
 		return suggestions
-	
+
+"""
+time complexity:
+- O((n * log(n)) + (n * m) + k); n is the number of products, m is the length of each word; k is the length of searchWord
+
+space complexity:
+- O(n * m)
+"""

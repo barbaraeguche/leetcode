@@ -45,3 +45,10 @@ class Trie:
 		# prefix is in trie
 		return True
 	
+"""
+time complexity:
+- O(n); n is the average length of each word
+
+space complexity:
+- O(n * w); n is the number of words, w is the length of each word
+"""

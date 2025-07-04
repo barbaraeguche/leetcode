@@ -41,4 +41,14 @@ class WordDictionary:
 				return dfs(index + 1, node.children[char])
 			
 		return dfs(0, self.root)
-	
+
+"""
+time complexity:
+- addWord: O(n)
+- search:
+	- best: O(m)
+	- worst (with '.'): O(b^m), where b is the branching factor (max 26)
+
+space complexity:
+- O((n * w) + m); n is the number of words, w is the length of each word, m is the recursion stack
+"""
