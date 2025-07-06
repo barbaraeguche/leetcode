@@ -7,15 +7,15 @@ class Solution:
 		inorder = []
 		
 		# traverse the tree
-		def traversal(node: Optional[TreeNode]) -> None:
+		def dfs(node: Optional[TreeNode]) -> None:
 			if not node:
 				return
 			
-			traversal(node.left)
+			dfs(node.left)
 			inorder.append(node.val)
-			traversal(node.right)
+			dfs(node.right)
 		
-		traversal(root)
+		dfs(root)
 		
 		root = TreeNode(inorder[0])
 		node = root

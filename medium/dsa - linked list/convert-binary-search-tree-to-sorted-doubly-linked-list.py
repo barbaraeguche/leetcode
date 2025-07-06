@@ -11,10 +11,10 @@ class Solution:
 		head = curr = None
 		
 		# basically an inorder traversal
-		def traversal(node: 'Optional[Node]'):
+		def dfs(node: 'Optional[Node]'):
 			if node:
 				nonlocal head, curr
-				traversal(node.left)
+				dfs(node.left)
 				
 				# set head if not set
 				if not head:
@@ -25,10 +25,10 @@ class Solution:
 					node.left, curr.right = curr, node
 					curr = node
 				
-				traversal(node.right)
+				dfs(node.right)
 		
 		# call the function
-		traversal(root)
+		dfs(root)
 		
 		# complete the cycle
 		head.left, curr.right = curr, head

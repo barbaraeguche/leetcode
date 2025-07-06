@@ -8,7 +8,8 @@ class Solution:
 		if grid[0][0] == 1:
 			return -1
 		
-		rows, cols = len(grid), len(grid[0])
+		# n x n grid
+		size = len(grid)
 		directions = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]]
 		
 		path = 1
@@ -21,7 +22,7 @@ class Solution:
 				nr, nc = queue.popleft()
 				
 				# bottom right reached
-				if nr == rows - 1 and nc == cols - 1:
+				if nr == size - 1 and nc == size - 1:
 					return path
 				
 				for dr, dc in directions:
@@ -29,8 +30,8 @@ class Solution:
 					
 					# within the grid range
 					if (
-						0 <= row < rows and
-						0 <= col < cols and
+						0 <= row < size and
+						0 <= col < size and
 						grid[row][col] == 0 and
 						(row, col) not in seen
 					):

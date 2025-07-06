@@ -6,13 +6,13 @@ class Solution:
 	def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
 		inorder = []
 		
-		def traversal(root: Optional[TreeNode]) -> None:
+		def dfs(root: Optional[TreeNode]) -> None:
 			if root:
-				traversal(root.left)
+				dfs(root.left)
 				inorder.append(root.val)
-				traversal(root.right)
+				dfs(root.right)
 		
-		traversal(root)
+		dfs(root)
 		return inorder[k - 1]
 	
 """

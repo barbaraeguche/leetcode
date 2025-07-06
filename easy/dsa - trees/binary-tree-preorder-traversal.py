@@ -6,11 +6,11 @@ class Solution:
 	def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
 		preorder = []
 		
-		def traversal(node: Optional[TreeNode]) -> None:
+		def dfs(node: Optional[TreeNode]) -> None:
 			if node:
 				preorder.append(node.val)
-				traversal(node.left)
-				traversal(node.right)
+				dfs(node.left)
+				dfs(node.right)
 		
-		traversal(root)
+		dfs(root)
 		return preorder

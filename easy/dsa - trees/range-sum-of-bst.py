@@ -4,16 +4,16 @@
 # solution #
 class Solution:
 	def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
-		def traversal(node):
+		def dfs(node):
 			if not node:
 				return 0
 			
 			# bst pruning
 			if node.val < low:
-				return traversal(node.right)
+				return dfs(node.right)
 			if node.val > high:
-				return traversal(node.left)
+				return dfs(node.left)
 			
-			return node.val + traversal(node.left) + traversal(node.right)
+			return node.val + dfs(node.left) + dfs(node.right)
 		
-		return traversal(root)
+		return dfs(root)

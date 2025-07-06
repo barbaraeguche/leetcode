@@ -11,6 +11,7 @@ class Solution:
 			mid = (l + r) // 2
 			# find the (row, col) of middle value
 			row, col = mid // cols, mid % cols
+			
 			# get the value
 			num = matrix[row][col]
 			
@@ -23,3 +24,11 @@ class Solution:
 				l = mid + 1
 		
 		return False
+
+"""
+time complexity:
+- O(log(n))
+
+space complexity:
+- O(1)
+"""

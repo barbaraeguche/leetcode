@@ -6,12 +6,12 @@ class Solution:
 	def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
 		inorder = []
 		
-		def traversal(node: Optional[TreeNode]) -> None:
+		def dfs(node: Optional[TreeNode]) -> None:
 			if node:
-				traversal(node.left)
+				dfs(node.left)
 				inorder.append(node.val)
-				traversal(node.right)
+				dfs(node.right)
 		
-		traversal(root)
+		dfs(root)
 		return inorder
 	

@@ -6,7 +6,7 @@ class Solution:
 	def closestValue(self, root: Optional[TreeNode], target: float) -> int:
 		value = root.val
 		
-		def traversal(node: Optional[TreeNode]) -> None:
+		def dfs(node: Optional[TreeNode]) -> None:
 			if not node:
 				return
 			
@@ -23,10 +23,10 @@ class Solution:
 				value = node.val
 			
 			# recursively search tree
-			traversal(node.left)
-			traversal(node.right)
+			dfs(node.left)
+			dfs(node.right)
 		
-		traversal(root)
+		dfs(root)
 		return value
 
 """

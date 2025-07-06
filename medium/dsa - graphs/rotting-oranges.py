@@ -27,7 +27,11 @@ class Solution:
 					row, col = dr + nr, dc + nc
 					
 					# within the grid range
-					if 0 <= row < rows and 0 <= col < cols and grid[row][col] == 1:
+					if (
+						0 <= row < rows and
+						0 <= col < cols and
+						grid[row][col] == 1
+					):
 						grid[row][col] = 2
 						queue.append((row, col))
 			
@@ -47,5 +51,5 @@ time complexity:
 - O(n * m)
 
 space complexity:
-- O(n * m)
+- O(n)
 """

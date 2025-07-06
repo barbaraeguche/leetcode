@@ -7,14 +7,14 @@ class Solution:
 		inorder = []
 		
 		# since the tree is a bst, run an inorder traversal for a sorted array
-		def traversal(root: Optional[TreeNode]) -> None:
+		def dfs(root: Optional[TreeNode]) -> None:
 			if root:
-				traversal(root.left)
+				dfs(root.left)
 				inorder.append(root.val)
-				traversal(root.right)
+				dfs(root.right)
 		
 		# traversal call
-		traversal(root)
+		dfs(root)
 		
 		# two pointers as the array is sorted
 		left, right = 0, len(inorder) - 1

@@ -11,7 +11,7 @@ class Solution:
 			adjacentList[src].append(dest)
 			adjacentList[dest].append(src)
 		
-		def traversal(src, dest, seen):
+		def dfs(src, dest, seen):
 			# cannot be re-traversed
 			if src in seen:
 				return False
@@ -24,12 +24,12 @@ class Solution:
 			
 			# dfs on its neighbours
 			for neigh in adjacentList[src]:
-				if traversal(neigh, dest, seen):
+				if dfs(neigh, dest, seen):
 					return True
 			
 			return False
 		
-		return traversal(source, destination, set())
+		return dfs(source, destination, set())
 
 """
 time complexity:

@@ -7,14 +7,14 @@ class Solution:
 		preorder = []
 		
 		# traverse through the tree
-		def traversal(node: Optional[TreeNode]) -> None:
+		def dfs(node: Optional[TreeNode]) -> None:
 			if node:
 				preorder.append(node.val)
-				traversal(node.left)
-				traversal(node.right)
+				dfs(node.left)
+				dfs(node.right)
 		
 		# call the method
-		traversal(root)
+		dfs(root)
 		
 		# remove duplicates and sort the array
 		minimum = list(set(preorder))
