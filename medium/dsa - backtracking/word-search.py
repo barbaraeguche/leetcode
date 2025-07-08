@@ -12,7 +12,11 @@ class Solution:
 				return True
 			
 			# boundary check
-			if not (0 <= r < rows and 0 <= c < cols and board[r][c] == word[idx]):
+			if not (
+				0 <= r < rows and
+				0 <= c < cols and
+				board[r][c] == word[idx]
+			):
 				return False
 			
 			# save current character; mark current grid point as visited

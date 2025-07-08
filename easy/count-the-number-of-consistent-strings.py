@@ -4,12 +4,24 @@
 # solution #
 class Solution:
 	def countConsistentStrings(self, allowed: str, words: List[str]) -> int:
-		count = 0
-		counter_allowed = Counter(allowed)
+		consistent, countAllowed = 0, Counter(allowed)
 		
 		for word in words:
-			if len(Counter(set(word)) - counter_allowed) == 0:
-				count += 1
+			valid = True
+			
+			for char in word:
+				if char not in countAllowed:
+					valid = False
+					break
+			
+			consistent += 1 if valid else 0
 		
-		return count
-	
+		return consistent
+
+"""
+time complexity:
+- O(n * m); n is the length of the array, m is length of each word
+
+space complexity:
+- O(1)
+"""
