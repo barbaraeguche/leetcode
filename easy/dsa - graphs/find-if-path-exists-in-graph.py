@@ -33,8 +33,8 @@ class Solution:
 
 """
 time complexity:
-- O(V + E)
+- O(v + e)
 
 space complexity:
-- O(V + E)
+- O(v + e)
 """
