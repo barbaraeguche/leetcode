@@ -4,10 +4,18 @@
 # solution #
 class Solution:
 	def reverseBits(self, n: int) -> int:
-		string = ""
+		number = 0
 		
-		for i in range(31, -1, -1):
+		for i in range(32):
 			bit = (n >> i) & 1
-			string = str(bit) + string
+			number += bit << (31 - i)
 		
-		return int(string, 2)
+		return number
+
+"""
+time complexity:
+- O(1)
+
+space complexity:
+- O(1)
+"""

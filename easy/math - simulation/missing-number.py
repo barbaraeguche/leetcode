@@ -4,10 +4,17 @@
 # solution #
 class Solution:
 	def missingNumber(self, nums: List[int]) -> int:
-		length = len(nums)
+		n = len(nums)
 		
-		sum1 = (length * (length + 1)) // 2
-		sum2 = sum(nums)
+		formal = (n * (n + 1)) // 2
+		summation = sum(nums)
 		
-		return sum1 - sum2
+		return formal - summation
 	
+"""
+time complexity:
+- O(1)
+
+space complexity:
+- O(1)
+"""

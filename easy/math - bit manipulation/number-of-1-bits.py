@@ -4,9 +4,6 @@
 # solution #
 class Solution:
 	def hammingWeight(self, n: int) -> int:
-		return bin(n)[2:].count('1')
-	
-	def hammingWeight(self, n: int) -> int:
 		count = 0
 	
 		for i in range(31, -1, -1):
@@ -14,3 +11,11 @@ class Solution:
 			count += bit
 		
 		return count
+
+"""
+time complexity:
+- O(1)
+
+space complexity:
+- O(1)
+"""

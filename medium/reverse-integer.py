@@ -3,15 +3,22 @@
 
 # solution #
 class Solution:
-	class Solution:
-		def reverse(self, x: int) -> int:
-			MIN, MAX = -2 ** 31, (2 ** 31) - 1
-			
-			positive = abs(x)
-			num = int(str(positive)[::-1])
-			
-			# out of range
-			if not MIN <= num <= MAX:
-				return 0
-			
-			return num if positive == x else -num
+	def reverse(self, x: int) -> int:
+		MIN, MAX = -2 ** 31, (2 ** 31) - 1
+		
+		positive = abs(x)
+		num = int(str(positive)[::-1])
+		
+		# out of range
+		if not MIN <= num <= MAX:
+			return 0
+		
+		return num if positive == x else -num
+	
+"""
+time complexity:
+- O(log(n))
+
+space complexity:
+- O(log(n))
+"""
