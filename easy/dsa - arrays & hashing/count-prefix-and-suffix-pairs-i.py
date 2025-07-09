@@ -10,7 +10,7 @@ class Solution:
 		
 		for i in range(length):
 			for j in range(i+1, length):
-				w1, w2 = words[i],  words[j]
+				w1, w2 = words[i], words[j]
 				
 				if w2.startswith(w1) and w2.endswith(w1):
 					pairCount += 1
