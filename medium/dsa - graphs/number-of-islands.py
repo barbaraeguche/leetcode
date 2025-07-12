@@ -11,7 +11,11 @@ class Solution:
 		
 		def dfs(r, c) -> None:
 			# within range of grid
-			if 0 <= r < rows and 0 <= c < cols and grid[r][c] == "1":
+			if (
+				0 <= r < rows and
+				0 <= c < cols and
+				grid[r][c] == "1"
+			):
 				grid[r][c] = "0"  # mark this as visited
 				dfs(r-1, c)  # up
 				dfs(r+1, c)  # down

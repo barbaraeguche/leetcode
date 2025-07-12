@@ -12,8 +12,7 @@ class Solution:
 		size = len(grid)
 		directions = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]]
 		
-		path = 1
-		seen, queue = {0, 0}, deque([(0, 0)])
+		path, queue = 1, deque([(0, 0)])
 		
 		while queue:
 			length = len(queue)
@@ -32,10 +31,9 @@ class Solution:
 					if (
 						0 <= row < size and
 						0 <= col < size and
-						grid[row][col] == 0 and
-						(row, col) not in seen
+						grid[row][col] == 0
 					):
-						seen.add((row, col))
+						grid[row][col] = 1
 						queue.append((row, col))
 			
 			# increment for current batch of paths

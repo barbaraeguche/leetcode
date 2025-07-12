@@ -11,7 +11,11 @@ class Solution:
 		
 		def dfs(r, c) -> int:
 			# not within range of grid
-			if not (0 <= r < rows and 0 <= c < cols and grid[r][c] == 1):
+			if not (
+				0 <= r < rows and
+				0 <= c < cols and
+				grid[r][c] == 1
+			):
 				return 0
 			
 			grid[r][c] = 0
