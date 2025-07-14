@@ -45,8 +45,8 @@ class Solution:
 
 """
 time complexity:
-- O(m * n * 4^L); L is the length of the word
+- O(n * m * 4 * 3^(l-1)); n is the number of rows, m is the number of cols, l is the word length
 
 space complexity:
-- O(L)
+- O(l)
 """

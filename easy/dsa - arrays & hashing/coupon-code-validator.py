@@ -22,6 +22,7 @@ class Solution:
 		validCodes = list(sorted(validCodes, key=lambda x: (businessLines[x[0]], x[1])))
 		
 		return [code for _, code in validCodes]
+	
 """
 time complexity:
 - O(n * m * log(n)); n is the length of array, m is the regex matching

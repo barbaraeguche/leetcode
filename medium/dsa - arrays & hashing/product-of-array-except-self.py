@@ -4,16 +4,23 @@
 # solution #
 class Solution:
 	def productExceptSelf(self, nums: List[int]) -> List[int]:
-		left, right = [1] * len(nums), [1] * len(nums)
+		length = len(nums)
 		
-		# start with 1 at both ends, then [0] val at idx 1
-		for i, n in enumerate(nums[:-1], 1):
-			left[i] = nums[i-1] * left[i-1]
-			right[-i-1] = nums[-i] * right[-i]
+		left, right = [1] * length, [1] * length
 		
-		# store the calculation in the left array
-		for i, n in enumerate(left):
+		for i in range(1, length):
+			left[i] = left[i-1] * nums[i-1]
+			right[-i-1] = right[-i] * nums[-i]
+		
+		for i in range(length):
 			left[i] = left[i] * right[i]
 		
 		return left
-	
+
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(n)
+"""

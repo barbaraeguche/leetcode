@@ -4,13 +4,11 @@
 # solution #
 class Solution:
 	def countCharacters(self, words: List[str], chars: str) -> int:
-		charsMap = defaultdict(int)
-		
-		count = 0
+		count, charsMap = 0, defaultdict(int)
 		
 		# store count of characters in chars
 		for char in chars:
-			charsMap[char] = charsMap.setdefault(char, 0) + 1
+			charsMap[char] += 1
 		
 		# check if it can be formed
 		for word in words:

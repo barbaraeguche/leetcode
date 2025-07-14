@@ -4,25 +4,19 @@
 # solution #
 class Solution:
 	def pairSum(self, head: Optional[ListNode]) -> int:
-		stack, slow = self.find_middle(head)
-		max_twin = -1
+		stack, slow = self.getMiddle(head)
+		maxTwin = -1
 		
 		while stack:
-			popped = stack.pop()
-			value = slow.val
-			
-			if (popped + value) > max_twin:
-				max_twin = popped + value
-			
+			maxTwin = max(maxTwin, stack.pop() + slow.val)
 			slow = slow.next
 		
-		return max_twin
+		return maxTwin
 	
-	@staticmethod
-	def find_middle(head: Optional[ListNode]):
-		stack = []
+	def getMiddle(self, head: Optional[ListNode]):
 		slow = fast = head
-		
+		stack = []
+	
 		# find the middle node with slow and fast pointers
 		while fast and fast.next:
 			stack.append(slow.val)
@@ -30,4 +24,11 @@ class Solution:
 			fast = fast.next.next
 		
 		return stack, slow
-	
+
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(n // 2)
+"""

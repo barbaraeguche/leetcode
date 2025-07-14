@@ -4,7 +4,7 @@
 # solution #
 class Solution:
 	def minimumRecolors(self, blocks: str, k: int) -> int:
-		currMin = minCount = 0
+		currMin = 0
 		
 		for i in range(k):
 			if blocks[i] == "W":

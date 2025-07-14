@@ -7,8 +7,7 @@ class Solution:
 		rows, cols = len(grid), len(grid[0])
 		directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
 		
-		minutes = 0
-		queue = deque()
+		minutes, queue = 0, deque()
 		
 		# add all rotten oranges to the queue
 		for r in range(rows):
