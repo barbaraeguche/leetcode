@@ -7,14 +7,14 @@ class Solution:
 		idx, length = 0, len(s)
 		
 		# for each row
-		matrix = ["" for i in range(numRows)]
+		matrix = ["" for _ in range(numRows)]
 		
 		def isStrEmpty() -> bool:
 			return idx == length
 		
 		while idx < length:
 			# top to bottom
-			for i in range(0, numRows):
+			for i in range(numRows):
 				if isStrEmpty():
 					break
 				
