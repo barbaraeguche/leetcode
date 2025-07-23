@@ -8,9 +8,9 @@ class Solution:
 		
 		# build an adjacent list
 		for src, dest in prerequisites:
-			adjacentList[src].append(dest)
+			adjacentList[dest].append(src)
 			# keep track of in-degree nodes
-			incoming[dest] += 1
+			incoming[src] += 1
 		
 		queue = deque()
 		

@@ -12,14 +12,14 @@ class Solution:
 				right += 1
 			else:
 				# running length of current character
-				count += right - 1 if right > 1 else 0
+				count += right - 1
 				
 				# reset right pointer; update the character
 				right = 1
 				current = char
 		
 		# for the last running character
-		count += right - 1 if right > 1 else 0
+		count += right - 1
 		
 		return count
 
