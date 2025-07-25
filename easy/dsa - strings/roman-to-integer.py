@@ -5,7 +5,6 @@
 class Solution:
 	def romanToInt(self, s: str) -> int:
 		integer, length = 0, len(s)
-		
 		symbolMap = {
 			"I": 1, "V": 5, "X": 10, "L": 50,
 			"C": 100, "D": 500, "M": 1000
@@ -17,7 +16,7 @@ class Solution:
 				s[idx + 1] in (char1, char2)
 			)
 		
-		for i in range(len(s) - 1, -1, -1):
+		for i in range(length - 1, -1, -1):
 			char = s[i]
 			# avoid out-of-bounds
 			isInBounds = i + 1 < length

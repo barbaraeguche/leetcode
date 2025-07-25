@@ -4,8 +4,22 @@
 # solution #
 class Solution:
 	def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
-		nums = "".join(str(num) for num in nums)
-		splitted = nums.split('0')
+		maxCons = count = 0
 		
-		return len(max(splitted))
-	
+		for num in nums:
+			if num == 1:
+				count += 1
+			else:
+				maxCons = max(maxCons, count)
+				count = 0  # reset the counter
+		
+		# for the last value if it where a `1`
+		return max(maxCons, count)
+
+"""
+time complexity:
+- O(n)
+
+space complexity:
+- O(1)
+"""

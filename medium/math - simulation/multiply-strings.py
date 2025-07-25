@@ -17,9 +17,9 @@ class Solution:
 			carry, value = divmod(summation, 10)
 			
 			padding = 10 ** pad
-			
 			# running multiplication
 			number = value * padding
+			
 			return multiplyNum(i - 1, n2, carry, pad + 1) + number
 		
 		for j in range(m - 1, -1, -1):

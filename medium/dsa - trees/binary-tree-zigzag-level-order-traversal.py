@@ -9,9 +9,7 @@ class Solution:
 		
 		# keep track of level, odd levels are reversed
 		idx = 0
-		
-		array = []
-		queue = deque([root])
+		array, queue = [], deque([root])
 		
 		while queue:
 			length = len(queue)

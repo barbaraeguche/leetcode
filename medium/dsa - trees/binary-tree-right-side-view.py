@@ -7,8 +7,7 @@ class Solution:
 		if not root:
 			return []
 		
-		array = []
-		queue = deque([root])
+		array, queue = [], deque([root])
 		
 		while queue:
 			length = len(queue)
