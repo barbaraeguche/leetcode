@@ -11,4 +11,4 @@ function reduce(nums: number[], fn: Fn, init: number): number {
 		summation = fn(summation, num);
 	}
 	return summation;
-};
+}

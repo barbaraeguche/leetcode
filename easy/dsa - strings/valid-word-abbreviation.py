@@ -4,30 +4,28 @@
 # solution #
 class Solution:
 	def validWordAbbreviation(self, word: str, abbr: str) -> bool:
-		i, string = 0, ""
+		idx, string = 0, ""
 		
-		while i < len(abbr):
-			if abbr[i].isalpha():
-				string += abbr[i]
-				i += 1
+		while idx < len(abbr):
+			if abbr[idx].isalpha():
+				string += abbr[idx]
+				idx += 1
+			
 			else:
-				temp = ""
+				cnt = currNum = 0
 				
-				while i < len(abbr) and abbr[i].isdigit():
-					temp += abbr[i]
-					i += 1
+				while idx < len(abbr) and abbr[idx].isdigit():
+					currNum = currNum * 10 + ord(abbr[idx]) - ord("0")
+					cnt, idx = cnt + 1, idx + 1
+					
+					# leading zero
+					if cnt == 1 and currNum == 0:
+						return False
 				
-				# leading zero
-				if temp[0] == "0":
-					return False
-				
-				# digit num and string length
-				num = int(temp)
 				length = len(string)
+				window = currNum + length
 				
-				window = length + num
-				
-				# digit is greater than total word len
+				# cannot be an abbreviation
 				if window > len(word):
 					return False
 				

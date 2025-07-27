@@ -4,9 +4,7 @@
 # solution #
 class Solution:
 	def mergeAlternately(self, word1: str, word2: str) -> str:
-		l1, l2 = len(word1), len(word2)
-	
-		string = ""
+		string, l1, l2 = "", len(word1), len(word2)
 		
 		for i in range(max(l1, l2)):
 			if i < l1:

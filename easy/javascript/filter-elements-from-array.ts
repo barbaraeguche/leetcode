@@ -5,12 +5,12 @@
 type Fn = (n: number, i: number) => any
 
 function filter(arr: number[], fn: Fn): number[] {
-	let new_arr: number[] = [];
+	let newArr: number[] = [];
 	
 	for (let i = 0; i < arr.length; i++) {
-		const notFilter = fn(arr[i], i);
-		if (notFilter) new_arr.push(arr[i]);
+		if (fn(arr[i], i)) {
+			newArr.push(arr[i]);
+		}
 	}
-	
-	return new_arr;
-};
+	return newArr;
+}

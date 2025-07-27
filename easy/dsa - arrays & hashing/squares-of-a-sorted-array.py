@@ -10,8 +10,8 @@ class Solution:
 		left, right = 0, n - 1
 		position = n - 1
 		
-		# use binary search
-		while left <= right:
+		# two pointer approach
+		while position >= 0:
 			n1, n2 = nums[left], nums[right]
 			
 			if abs(n1) >= abs(n2):

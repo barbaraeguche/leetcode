@@ -2,31 +2,38 @@
 # link: https://leetcode.com/problems/merge-k-sorted-lists
 
 # solution #
+import heapq as hq
+
 class Solution:
 	def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-		for i in range(1, len(lists)):
-			lists[i] = self.mergeList(lists[i-1], lists[i])
+		if not lists:
+			return None
 		
-		return lists[-1] if lists else None
-	
-	@staticmethod
-	def mergeList(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-		head = ListNode(0)
+		minHeap = []
+		
+		for i, node in enumerate(lists):
+			if node:
+				hq.heappush(minHeap, (node.val, i, node))
+		
+		head = ListNode(-1)
 		curr = head
 		
-		# merge the list
-		while l1 and l2:
-			if l1.val < l2.val:
-				curr.next = l1
-				l1 = l1.next
-			else:
-				curr.next = l2
-				l2 = l2.next
+		while minHeap:
+			val, i, node = hq.heappop(minHeap)
 			
+			curr.next = node
 			curr = curr.next
+			node = node.next
+			
+			if node:
+				hq.heappush(minHeap, (node.val, i, node))
 		
-		# add the remaining nodes
-		curr.next = l1 if l1 else l2
-		
-		# .next because we started with a random value
 		return head.next
+	
+"""
+time complexity:
+- O(n * log(k)); n is the total number of nodes across k lists, k is the length of the list
+
+space complexity:
+- O(k)
+"""

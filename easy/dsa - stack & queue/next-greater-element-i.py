@@ -4,17 +4,18 @@
 # solution #
 class Solution:
 	def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+		# for better indexing
+		nums1Map = {val: idx for idx, val in enumerate(nums1)}
 		greater, stack = [-1] * len(nums1), []
 		
-		for idx, num in enumerate(nums2):
-			while stack and nums2[stack[-1][0]] < num:
-				_, n = stack.pop()
+		for idx in range(len(nums2)):
+			while stack and nums2[stack[-1]] < nums2[idx]:
+				num = nums2[stack.pop()]
 				
-				# find the idx in nums1
-				if n in nums1:
-					greater[nums1.index(n)] = num
+				# if present in nums1, store the next greater value
+				if num in nums1Map:
+					greater[nums1Map[num]] = nums2[idx]
 			
-			# store as (idx, num)
-			stack.append((idx, num))
+			stack.append(idx)
 		
 		return greater
