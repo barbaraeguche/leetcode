@@ -6,7 +6,7 @@ class Solution:
 	def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
 		length, combinations = len(candidates), []
 		
-		def backtrack(idx: int, target: int, path: List[int]):
+		def validCombSum(idx: int, target: int, path: List[int]):
 			# found a combination sum
 			if target == 0:
 				combinations.append(path[:])
@@ -22,11 +22,11 @@ class Solution:
 				path.append(num)
 				
 				# find all possible combinations
-				backtrack(i, target - num, path)
+				validCombSum(i, target - num, path)
 				# backtrack
 				path.pop()
 		
-		backtrack(0, target, [])
+		validCombSum(0, target, [])
 		return combinations
 
 """

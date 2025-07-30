@@ -16,10 +16,8 @@ class MovingAverage:
 		idx = self.idx % self.size
 		
 		if self.nums[idx] is not None:
-			num = self.nums[idx]
-			
 			# remove from moving average
-			self.total -= num
+			self.total -= self.nums[idx]
 			
 			# update index
 			self.idx = idx + 1

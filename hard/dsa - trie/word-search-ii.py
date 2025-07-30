@@ -64,9 +64,6 @@ class Solution:
 		return foundWords
 	
 """
-w * l
-n * m * 4^s
-
 time complexity:
 - O(n * m * 4 * 3^(t-1)); n is the number of rows, m is the number of cols, t is the max length of any word in words
 
