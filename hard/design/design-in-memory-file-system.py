@@ -32,7 +32,6 @@ class FileSystem:
 	
 	def addContentToFile(self, filePath: str, content: str) -> None:
 		node = self.mkdirHelper(filePath)
-		
 		# add content to file
 		node.contents += content
 	
