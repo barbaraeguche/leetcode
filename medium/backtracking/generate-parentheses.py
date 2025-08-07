@@ -4,19 +4,18 @@
 # solution #
 class Solution:
 	def generateParenthesis(self, n: int) -> List[str]:
-		result = []
+		parentheses = []
 		
-		def backtrack(open_count: int, close_count: int, string: str) -> None:
-			if open_count == close_count == n:
-				result.append(string[:])
+		def backtrack(openCnt: int, closeCnt: int, path: str) -> None:
+			if openCnt == closeCnt == n:
+				parentheses.append(path[:])
 				return
 			
 			# must come before a closed bracket
-			if open_count < n:
-				backtrack(open_count + 1, close_count, f"{string}(")
-			
-			if close_count < open_count:
-				backtrack(open_count, close_count + 1, f"{string})")
-		
+			if openCnt < n:
+				backtrack(openCnt + 1, closeCnt, f"{path}(")
+			if closeCnt < openCnt:
+				backtrack(openCnt, closeCnt + 1, f"{path})")
+				
 		backtrack(0, 0, "")
-		return result
+		return parentheses

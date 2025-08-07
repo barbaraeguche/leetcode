@@ -7,8 +7,8 @@ when either get (and key exist) or put is called, move the node
 to the end of the list as it becomes the most recently used
 """
 
-class Node:
-	def __init__(self, key: int, value: int):
+class ListNode:
+	def __init__(self, key=0, value=0):
 		self.key = key
 		self.value = value
 		# use doubly linked lists
@@ -17,11 +17,11 @@ class Node:
 class LRUCache:
 	
 	def __init__(self, capacity: int):
-		self.capacity = capacity
 		self.cache = {}
+		self.capacity = capacity
 		
 		# dummy left-right nodes
-		self.left, self.right = Node(0, 0), Node(0, 0)
+		self.left, self.right = ListNode(), ListNode()
 		# connect them
 		self.left.next, self.right.prev = self.right, self.left
 	
@@ -41,7 +41,7 @@ class LRUCache:
 		if key in self.cache:
 			self.remove(self.cache[key])
 		
-		node = Node(key, value)
+		node = ListNode(key, value)
 		
 		# add to cache and list
 		self.cache[key] = node
@@ -55,14 +55,14 @@ class LRUCache:
 			self.remove(lru)
 			del self.cache[lru.key]
 	
-	def insert(self, node: Node) -> None:
+	def insert(self, node: ListNode) -> None:
 		penultimate, last = self.right.prev, self.right
 		
 		# connect nodes
 		penultimate.next = last.prev = node
 		node.prev, node.next = penultimate, last
 	
-	def remove(self, node: Node) -> None:
+	def remove(self, node: ListNode) -> None:
 		prev, nxt = node.prev, node.next
 		prev.next, nxt.prev = nxt, prev
 		

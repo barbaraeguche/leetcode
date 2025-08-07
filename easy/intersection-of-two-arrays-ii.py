@@ -4,16 +4,25 @@
 # solution #
 class Solution:
 	def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-		arr = []
+		nums1Map, nums2Map = defaultdict(int), defaultdict(int)
+		intersection = []
 		
 		for num in nums1:
-			if num in nums2:
-				# find the index and remove
-				idx = nums2.index(num)
-				nums2 = nums2[:idx] + nums2[idx+1:]
-				
-				# append to list
-				arr.append(num)
+			nums1Map[num] += 1
+		for num in nums2:
+			nums2Map[num] += 1
 		
-		return arr
-	
+		for k, v in nums1Map.items():
+			if k in nums2Map:
+				value = min(v, nums2Map[k])
+				intersection.extend([k for _ in range(value)])
+		
+		return intersection
+
+"""
+time complexity:
+- O(n + m)
+
+space complexity:
+- O(n + m)
+"""

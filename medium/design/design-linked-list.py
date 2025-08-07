@@ -2,7 +2,7 @@
 # link: https://leetcode.com/problems/design-linked-list
 
 # solution #
-class Node:
+class ListNode:
 	def __init__(self, val=0, next=None):
 		self.val = val
 		self.next = next
@@ -10,7 +10,7 @@ class Node:
 class MyLinkedList:
 	
 	def __init__(self):
-		self.head = Node(-1)
+		self.head = ListNode(-1)
 		self.tail = self.head
 	
 	def get(self, index: int) -> int:
@@ -26,7 +26,7 @@ class MyLinkedList:
 		return -1  # index out of bound
 	
 	def addAtHead(self, val: int) -> None:
-		newHead = Node(val)
+		newHead = ListNode(val)
 		
 		# add at head
 		newHead.next = self.head.next
@@ -37,7 +37,7 @@ class MyLinkedList:
 			self.tail = newHead
 	
 	def addAtTail(self, val: int) -> None:
-		newTail = Node(val)
+		newTail = ListNode(val)
 		
 		self.tail.next = newTail
 		self.tail = newTail
@@ -51,7 +51,7 @@ class MyLinkedList:
 		
 		if curr:
 			if curr.next:
-				node = Node(val)
+				node = ListNode(val)
 				
 				# add to list
 				node.next = curr.next
