@@ -1,4 +1,4 @@
-# name: . binary search tree iterator
+# name: 173. binary search tree iterator
 # link: https://leetcode.com/problems/binary-search-tree-iterator
 
 # solution #

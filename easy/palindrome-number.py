@@ -3,15 +3,16 @@
 
 # solution #
 class Solution:
-  def isPalindrome(self, x: int) -> bool:
-    int_str = str(x)
-    a, b = 0, len(int_str) - 1
-
-    while a < b:
-      if int_str[a] != int_str[b]:
-        return False
-      else:
-        a += 1
-        b -= 1
-            
-    return True
+	def isPalindrome(self, x: int) -> bool:
+		# can never be a palindrome
+		if x < 0:
+			return False
+		
+		first, second = x, 0
+		
+		while x:
+			second = (second * 10) + (x % 10)
+			x //= 10
+		
+		return first == second
+	
