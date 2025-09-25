@@ -4,34 +4,26 @@
 # solution #
 class Solution:
 	def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-		rows, cols = len(text1), len(text2)
+		n, m = len(text1), len(text2)
+		dp = [0] * (m + 1)
 		
-		def commonSeq(r, c, memo):
-			# out of bounds
-			if r == rows or c == cols:
-				return 0
+		for i in range(n - 1, -1, -1):
+			dpCopy = [0] * (m + 1)
 			
-			key = f"{r}:{c}"
+			for j in range(m - 1, -1, -1):
+				if text1[i] == text2[j]:
+					dpCopy[j] = 1 + dp[j+1]
+				else:
+					dpCopy[j] = max(dp[j], dpCopy[j+1])
 			
-			# been here before
-			if key in memo:
-				return memo[key]
-			
-			# found a sequence, move r+1, c+1
-			if text1[r] == text2[c]:
-				memo[key] = commonSeq(r+1, c+1, memo) + 1
-			# explore either possible sequence
-			else:
-				memo[key] = max(commonSeq(r+1, c, memo), commonSeq(r, c+1, memo))
-			
-			return memo[key]
+			dp = dpCopy
 		
-		return commonSeq(0, 0, {})
+		return dp[0]
 
 """
 time complexity:
 - O(n * m)
 
 space complexity:
-- O(n * m)
+- O(m)
 """
