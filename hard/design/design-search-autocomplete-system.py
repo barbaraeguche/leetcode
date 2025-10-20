@@ -60,8 +60,16 @@ class AutocompleteSystem:
 
 """
 time complexity:
-- O()
+- insert: O(l); l is the length of sentence being inserted
+- search: O(p); p is the length of the prefix
+
+- init: O(n * l); n is the length of sentences
+- input: O(p + w * log(w)); w is the number of sentences in the set
 
 space complexity:
-- O()
+- insert: O(l)
+- search: O(w)
+
+- init: O(n * l)
+- input: O(w)
 """
